@@ -117,6 +117,22 @@
     background-color: #ffffff;
     height: 2px;
 }
+/*.submenu{
+    display: none;
+    position: absolute;
+    padding: 10px;
+    list-style: none;
+    width: 500px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.61);
+}
+.submenu li{
+    display: block;
+    padding: 5px 10px;
+}
+.nav-lists li:hover .submenu{
+    display: block;
+}*/
 
 h2 {
     color: black;

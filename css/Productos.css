@@ -1,84 +1,72 @@
 .tituloProductos {
-    margin: 10px;
-    /* Añade un margen de 10 pixeles al titulo de las paginas dentro de productos*/
+    margin: 10px; 
+    font-family: "archivo-black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.productos {
-    display: grid;
-    /* Establece que los elementos dentro de la clase productos estaran en disposicion grid */
+.productos  {
+    display: grid;   
     grid-template-columns: repeat(3, 1fr);
-    /* Establece que en esta clase habran 3 columnas que ocuparan 1 fragmento de la pantalla cada una */
     gap: 20px;
-    /* Añade margenes de 20px al rededor de todos los div */
 }
 
 .productos div:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    /* Establece una sombra al rededor del div */
+    box-shadow: 0 0 10px rgba(3, 59, 143, 0.5);    
 }
 
-.productos div {
+
+.productos   div {
     text-align: center;
-    box-shadow: none;
-    /* Establece una sombra inicialmente */
-    transition: box-shadow 0.3s;
-    /* establece un tiempo de 0,3 segundos para que aparezca por completo la sombra al rededor del div */
+    box-shadow: none;  
+    transition: box-shadow 0.3s;   
 }
 
-.productos div img {
-    width: 80%;
-    /* establece que la imagen va a ocupar el 80% del div */
+.productos   div img {
+    width: 50%;
+    height: 50%;
     border-radius: 10px;
-    /* redondea las orillas de las imagenes */
     margin: 5px 0px;
-    /* establece un margen arriba y abajo de las imagenes  */
 }
+
 
 .productos div p,
 .productos div h2,
 .productos div a {
     padding: 15px;
-    /* establece un padding de 15px para los p,h2,a dentro del div */
+   
 }
 
 .descripcion {
     text-align: center;
-    /* establece el texto en el centro del div */
+    
 }
 
-.productos div a {
+.productos   div a {
     font-size: 12px;
-    /* establece el tamaño de la fuente en 12px */
     text-decoration: none;
-    /* elimina la decoracion de los links */
     color: inherit;
-    /* Establece un color neutro para el texto de los links */
     background-color: #dad7cd;
-    /* Añade un color de fondo al boton */
     padding: 10px 15px;
-    /* Añade un relleno al rededor dle texto del boton */
     border: 1px solid black;
-    /* Establece un borde al boton */
     border-radius: 10px;
-    /* Establece una curva a las esquinas del boton */
     margin: 10px;
-    /* Establece un margen alrededor del boton */
+  
+}
+h2{
+    font-family: "germania-one", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: underline blue;
 }
 
-.marcadeAgua {
-    text-align: center;
-    /* establece el texto en el centro del div */
-    opacity: 50%;
-    /* establece que la opacidad del texto sea del 50% */
-}
 
 @media (max-width: 800px) {
 
-    /* Cambia el valor de 800px según tus necesidades */
-    .productos {
-        grid-template-columns: 1fr;
-        /* Cambia a una sola columna */
+   
+    .productos   {
+        grid-template-columns: 1fr;  
         justify-content: center;
-        /* Centra el contenido horizontalmente */
+       
     }
 }

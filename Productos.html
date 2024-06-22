@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="css/Productos.css">
     <link rel="stylesheet" href="css/General.css">
     <link rel="stylesheet" href="css/Nav.css">
+    <link rel="stylesheet" href="css/Slider.css">
     <link rel="icon" type="imag/png" href="img/iconos/logo.png">
+    <link rel="stylesheet" href="https://use.typekit.net/lct6xrs.css">
 </head>
 
 <body>
@@ -28,118 +30,310 @@
             <ul id="nav-lists">
                 <li class="close"><span onclick="Hide()"></span></li>
                 <li><a href="index.html">Pagina Principal</a></li>
+                <li><a href="#">Categorías</a>
+                    <!--<ul class="submenu">
+                        <li><a href="#">Ciencia ficción</a></li>
+                        <li><a href="#">Drama</a></li>
+                        <li><a href="#">Infantil</a></li>
+                        <li><a href="#">Terror</a></li>
+                        <li><a href="#">Comedia</a></li>
+                    </ul> -->
+                </li>
             </ul>
         </nav>
     </header>
-    <h1 class="tituloProductos">Hombres</h1><br> <!-- creamos el titulo principal de la pagina  -->
-    <section class="productos"> <!-- Creamos un secction que englobe todos los productos de la pagina -->
-        <div> <!-- Creamos un blque donde ira un producto junto con su titulo, su imagen y su descripcion -->
-            <h2>SUDADERA GRIS</h2> <!-- Creamos un titulo para el producto -->
-            <img src="img/ProductoH1.jpg" onmouseover="this.src='img/ProductoH2.jpg'"
-                onmouseout="this.src='img/ProductoH1.jpg'" alt="SUDADERA GRIS">
-            <!-- agregamos una imagen del producto, utilizamos onmouseover y onmouseout para mostar 2 imagenes diferentes cuando se pase el mouse por encima -->
-            <p class="descripcion">La sudadera gris de Hollister es una prenda versátil y de alta calidad que combina
-                estilo y comodidad. Esta sudadera presenta un diseño clásico en color gris, ideal para combinar
-                con cualquier atuendo casual.</p> <!-- agregamos una p para escribir una descripcion del producto -->
-            <p><strong>Precio: 39.95$</strong></p> <!-- agregamos una p para escribir el precio del producto -->
-            <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> <!-- agregamos un a para colocar un boton que lleve a WhatsApp -->
-            <p class="marcadeAgua">Hollister oficial ©</p> <!-- agregamos una p para escribir una marca de agua -->
-        </div>
-        <div>
-            <h2>SUDADERA NEGRA</h2>
-            <img src="img/ProductoH3.jpg" onmouseover="this.src='img/ProductoH4.jpg'"
-                onmouseout="this.src='img/ProductoH3.jpg'" alt="SUDADERA NEGRA">
-            <p class="descripcion">La sudadera gris de Hollister es una prenda versátil y de alta calidad que combina
-                estilo y comodidad. Esta sudadera presenta un diseño clásico en color negro, ideal para combinar
-                con cualquier atuendo casual.</p>
-            <p><strong>Precio: 29.95$</strong></p>
-            <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a>
-            <p class="marcadeAgua">Hollister oficial ©</p>
-        </div>
-        <div>
-            <h2>SUDADERA BLANCA</h2>
-            <img src="img/ProductoH5.jpg" onmouseover="this.src='img/ProductoH6.jpg'"
-                onmouseout="this.src='img/ProductoH5.jpg'" alt="SUDADERA BLANCA">
-            <p class="descripcion">La sudadera gris de Hollister es una prenda versátil y de alta calidad que combina
-                estilo y comodidad. Esta sudadera presenta un diseño clásico en color blanca, ideal para combinar
-                con cualquier atuendo casual.</p>
-            <p><strong>Precio: 39.95$</strong></p>
-            <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a>
-            <p class="marcadeAgua">Hollister oficial ©</p>
-        </div>
-        <div>
-            <h2>PANTALON GRIS</h2>
-            <img src="img/ProductoH7.jpg" onmouseover="this.src='img/ProductoH8.jpg'"
-                onmouseout="this.src='img/ProductoH7.jpg'" alt="PANTALONES GRISES">
-            <p class="descripcion">El pantalón estilo jogger gris de Hollister es una prenda moderna y versátil que
-                combina estilo y comodidad. Está confeccionado con materiales de alta calidad que garantizan durabilidad
-                y resistencia. Este pantalón presenta un diseño contemporáneo en color gris, ideal para lucir un look
-                casual y a la moda.</p>
-            <p><strong>Precio: 59.95$</strong></p>
-            <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a>
-            <p class="marcadeAgua">Hollister oficial ©</p>
-        </div>
-        <div>
-            <h2>PANTALON NEGRO</h2>
-            <img src="img/ProductoH9.jpg" onmouseover="this.src='img/ProductoH10.jpg'"
-                onmouseout="this.src='img/ProductoH9.jpg'" alt="PANTALONES NEGROS">
-            <p class="descripcion">El pantalón estilo jogger negro de Hollister es una prenda moderna y versátil que
-                combina estilo y comodidad. Está confeccionado con materiales de alta calidad que garantizan durabilidad
-                y resistencia. Este pantalón presenta un diseño contemporáneo en color negro, ideal para lucir un look
-                casual y a la moda.</p>
-            <p><strong>Precio: 49.95$</strong></p>
-            <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a>
-            <p class="marcadeAgua">Hollister oficial ©</p>
-        </div>
-        <div>
-            <h2>PANTALON BLANCO</h2>
-            <img src="img/ProductoH11.jpg" onmouseover="this.src='img/ProductoH12.jpg'"
-                onmouseout="this.src='img/ProductoH11.jpg'" alt="PANTALONES BLANCOS">
-            <p class="descripcion">El pantalón estilo jogger blanco de Hollister es una prenda moderna y versátil que
-                combina estilo y comodidad. Está confeccionado con materiales de alta calidad que garantizan durabilidad
-                y resistencia. Este pantalón presenta un diseño contemporáneo en color blanco, ideal para lucir un look
-                casual y a la moda.</p>
-            <p><strong>Precio: 59.95$</strong></p>
-            <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a>
-            <p class="marcadeAgua">Hollister oficial ©</p>
-        </div>
-        <div>
-            <h2>CAMISA NEGRA</h2>
-            <img src="img/ProductoH13.jpg" onmouseover="this.src='img/ProductoH14.jpg'"
-                onmouseout="this.src='img/ProductoH13.jpg'" alt="CAMISA NEGRA">
-            <p class="descripcion">La camisa negra sencilla de Hollister es una prenda clásica y versátil que combina
-                estilo y calidad. Está confeccionada con materiales de alta calidad que garantizan durabilidad y
-                resistencia. Esta camisa presenta un diseño sencillo en color negro, ideal para lucir elegante y
-                sofisticado en cualquier ocasión.</p>
-            <p><strong>Precio: 29.95$</strong></p>
-            <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a>
-            <p class="marcadeAgua">Hollister oficial ©</p>
-        </div>
-        <div>
-            <h2>CAMISA BLANCA</h2>
-            <img src="img/ProductoH15.jpg" onmouseover="this.src='img/ProductoH16.jpg'"
-                onmouseout="this.src='img/ProductoH15.jpg'" alt="CAMISA BLANCA">
-            <p class="descripcion">La camisa negra sencilla de Hollister es una prenda clásica y versátil que combina
-                estilo y calidad. Está confeccionada con materiales de alta calidad que garantizan durabilidad y
-                resistencia. Esta camisa presenta un diseño sencillo en color blanco, ideal para lucir elegante y
-                sofisticado en cualquier ocasión.</p>
-            <p><strong>Precio: 39.95$</strong></p>
-            <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a>
-            <p class="marcadeAgua">Hollister oficial ©</p>
-        </div>
-        <div>
-            <h2>CAMISA AZUL</h2>
-            <img src="img/ProductoH17.jpg" onmouseover="this.src='img/ProductoH18.jpg'"
-                onmouseout="this.src='img/ProductoH17.jpg'" alt="CAMISA AZUL">
-            <p class="descripcion">La camisa negra sencilla de Hollister es una prenda clásica y versátil que combina
-                estilo y calidad. Está confeccionada con materiales de alta calidad que garantizan durabilidad y
-                resistencia. Esta camisa presenta un diseño sencillo en color azul, ideal para lucir elegante y
-                sofisticado en cualquier ocasión.</p>
-            <p><strong>Precio: 39.95$</strong></p>
-            <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a>
-            <p class="marcadeAgua">Hollister oficial ©</p>
-        </div>
-    </section> <br>
+    <div class="slider">
+        <div class="slide-track">
+            <div class="slide">
+                <img src="img/Categorías/Ciencia ficción/Interestellar.jpg" alt="Interestellar">
+            </div>
+            <div class="slide">
+                <img src="img/Categorías/Ciencia ficción/Alicia en el pais de las Maravillas.jpg" alt="Alicia en el pais de las maravillas">
+            </div>
+            <div class="slide">
+                <img src="img/Categorías/Comedia/Super cool.jpg" alt="Super cool">
+            </div>
+            <div class="slide">
+                <img src="img/Categorías/Comedia/Y donde estan las rubias.jpg" alt="Y donde estan las rubias">
+            </div>
+            <div class="slide">
+                <img src="img/Categorías/Drama/Titanic.jpg" alt="Titanic">
+            </div>
+            <div class="slide">
+                <img src="img/Categorías/Drama/El padrino.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="img/Categorías/Infantil/Intensamente.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="img/Categorías/Infantil/Monsters Inc.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="img/Categorías/Terror/Asi en la tierra como en el infierno.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="img/Categorías/Terror/Annabelle.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="img/Categorías/Ciencia ficción/Interestellar.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="img/Categorías/Ciencia ficción/Alicia en el pais de las Maravillas.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="img/Categorías/Comedia/Super cool.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="img/Categorías/Comedia/Y donde estan las rubias.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="img/Categorías/Drama/Titanic.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="img/Categorías/Drama/El padrino.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="img/Categorías/Infantil/Intensamente.jpg" alt="">
+            </div>
+    </div>
+    <h1 class="tituloProductos">Categorías</h1><br> 
+    <h2>Ciencia ficción</h2>
+        <section class="productos">
+
+            <div> 
+                <h3>ALICIA EN EL PAÍS DE LAS MARAVILLAS</h3> 
+                <img src="img/Categorías/Ciencia ficción/Alicia en el pais de las Maravillas.jpg"  alt="Alicia en el pais de las Maravillas">
+                <p class="descripcion">Alicia, ahora una joven de 19 años de edad, regresa al País de las Maravillas para encontrar su verdadero destino y terminar con el gobierno de terror de la malvada reina Roja.</p> 
+                <p><strong>Precio: 10$</strong></p> 
+                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
+            </div>
+            <div>
+                <h3>AVENGERS: ENDGAME</h3> 
+                <img src="img/Categorías/Ciencia ficción/Avengers Endgame.jpg"  alt="Avengers Endgame">
+                <p class="descripcion">Los Vengadores restantes deben encontrar una manera de recuperar a sus aliados para un enfrentamiento épico con Thanos, el malvado que diezmó el planeta y el universo.</p> 
+                <p><strong>Precio: 20$</strong></p> 
+                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
+            </div>
+            <div>
+                <h3>HARRY POTTER Y LA PIEDRA SILOSOFAL</h3> 
+                <img src="img/Categorías/Ciencia ficción/Harry Potter.jpg"  alt="Harry Potter">
+                <p class="descripcion">En su cumpleaños, Harry Potter descubre que es hijo de dos magos y que tiene poderes mágicos. Debe asistir a la famosa escuela de magia y hechicería Hogwarts, donde hace amistad con dos jóvenes.</p> 
+                <p><strong>Precio: 15$</strong></p> 
+                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
+            </div>
+            <div>
+                <h3>STAR WARS</h3> 
+                <img src="img/Categorías/Ciencia ficción/Star Wars.jpg"  alt="Star Wars">
+                <p class="descripcion">Obi-Wan Kenobi es un joven aprendiz caballero Jedi bajo la tutela de Qui-Gon Jinn; Anakin Skywalker, quien después será padre de Luke Skywalker y se convertirá en Darth Vader, solamente es un niño de 9 años.</p> 
+                <p><strong>Precio: 20$</strong></p> 
+                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
+                
+            </div>
+            <div>
+                <h3>TERMINATOR</h3> 
+                <img src="img/Categorías/Ciencia ficción/Terminator 2.jpg"  alt="Terminator">
+                <p class="descripcion">Un asesino cibernético del futuro es enviado a Los Ángeles para matar a la mujer que procreará a un líder.</p> 
+                <p><strong>Precio: 10$</strong></p> 
+                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
+                
+            </div>
+            <div>
+                <h3>INTERESTELLAR</h3> 
+                <img src="img/Categorías/Ciencia ficción/Interestellar.jpg"  alt="Interestellar">
+                <p class="descripcion">Gracias a un descubrimiento, un grupo de científicos y exploradores, encabezados por Cooper, se embarcan en un viaje espacial para encontrar un lugar con las condiciones necesarias para reemplazar a la Tierra y comenzar una nueva vida allí.</p> 
+                <p><strong>Precio: 25$</strong></p> 
+                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
+                
+            </div>    
+    </section>
+
+
+        <h2>Drama</h2>
+        <section class="productos">
+            <div>
+                <h3>EL PADRINO</h3> 
+                <img src="img/Categorías/Drama/El padrino.jpg"  alt="El padrino">
+                <p class="descripcion">la vida de don Vito Corleone, el capo más respetado de Nueva York, de todas sus estrategias y los caminos del hijo que lo sucederá, de quien heredará su imperio, con ecos shakespereanos.</p> 
+                <p><strong>Precio: 15$</strong></p> 
+                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
+                
+            </div>
+            <div>
+                <h3>TITANIC</h3> 
+                <img src="img/Categorías/Drama/Titanic.jpg"  alt="Titanic">
+                <p class="descripcion">Una joven de la alta sociedad abandona a su arrogante pretendiente por un artista humilde en el trasatlántico que se hundió durante su viaje inaugural.</p> 
+                <p><strong>Precio: 10$</strong></p> 
+                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
+            </div>
+            <div>
+                <h3>HASTA EL ÚLTIMO HOMBRE</h3> 
+                <img src="img/Categorías/Drama/Hasta el último hombre.jpg"  alt="Hasta el último hombre">
+                <p class="descripcion">La historia de Desmond T. Doss, quien, debido a que se lo prohibía su fe, combatió en la Segunda Guerra Mundial sin portar un arma. No disparó ni una bala, pero salvó a 75 personas de la muerte.</p> 
+                <p><strong>Precio: 20$</strong></p> 
+                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
+            </div>
+            <div>
+                <h3>LO IMPOSIBLE</h3> 
+                <img src="img/Categorías/Drama/Lo imposible.jpg"  alt=" Lo imposible">
+                <p class="descripcion">María, Henry y sus tres hijos pequeños vuelan desde Japón a Tailandia para pasar las vacaciones de Navidad en la playa. La mañana después de Navidad, mientras se bañan en la piscina, un tsunami colosal destroza el hotel y gran parte de la costa del sudeste asiático</p> 
+                <p><strong>Precio: 15$</strong></p> 
+                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
+            </div>
+            <div>
+                <h3>FORREST GUMP</h3> 
+                <img src="img/Categorías/Drama/Forrest gump.jpg"  alt="Foorest gump">
+                <p class="descripcion">Forrest Gump, un joven sureño, tenaz e inocente, es protagonista de acontecimientos cruciales en la historia de los Estados Unidos.</p> 
+                <p><strong>Precio: 10$</strong></p> 
+                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
+            </div>
+            <div>
+                <h3>ATRACCIÓN PELIGROSA</h3> 
+                <img src="img/Categorías/Drama/Atracción peligrosa.jpg"  alt="Atracción peligrosa">
+                <p class="descripcion">La gerente de un banco no se da cuenta de que su nuevo y encantador galán es el mismo hombre que unos días antes la mantuvo secuestrada durante un robo.</p> 
+                <p><strong>Precio: 15$</strong></p> 
+                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
+                
+            </div>
+        </section>
+        <h2>Infantil</h2>
+        <section class="productos"> 
+            <div>
+                <h3>TOY STORY</h3> 
+                <img src="img/Categorías/Infantil/Toy story.jpg"  alt="Toy Story">
+                <p class="descripcion">Woody, el juguete favorito de Andy, se siente amenazado por la inesperada llegada de Buzz Lightyear, el guardián del espacio.</p> 
+                <p><strong>Precio: 20$</strong></p> 
+                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
+            </div>
+            <div>
+                <h3>EL REY LEÓN</h3> 
+                <img src="img/Categorías/Infantil/El rey Leon.jpg"  alt="El rey Leon">
+                <p class="descripcion">El joven Simba, hijo del rey Mufasa, debe luchar contra su malvado tío Scar para ocupar el trono que dejó su padre asesinado.</p> 
+                <p><strong>Precio: 10$</strong></p> 
+                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
+            </div>
+            <div>
+                <h3>INTENSAMENTE</h3> 
+                <img src="img/Categorías/Infantil/Intensamente.jpg"  alt="Intensamente">
+                <p class="descripcion">Las cinco emociones que conviven en el interior de una niña llamada Riley, alegría, miedo, desagrado, ira y tristeza, compiten por tomar el control de sus acciones. </p> 
+                <p><strong>Precio: 25$</strong></p> 
+                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
+            </div>
+            <div>
+                <h3>LOS INCREÍBLES</h3> 
+                <img src="img/Categorías/Infantil/Los increibles.jpg"  alt="Los increíbles">
+                <p class="descripcion">Un superhéroe retirado lucha contra el aburrimiento y, junto a su familia, tiene la oportunidad de salvar al mundo.</p> 
+                <p><strong>Precio: 15$</strong></p> 
+                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
+            </div>
+            <div>
+                <h3>KUNG FU PANDA</h3> 
+                <img src="img/Categorías/Infantil/Kung fu panda.jpg"  alt="Kung fu panda">
+                <p class="descripcion">El panda Po trabaja en la tienda de fideos de su familia y sueña en convertirse en un maestro del kung-fu. </p> 
+                <p><strong>Precio: 10$</strong></p> 
+                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
+            </div>
+            <div>
+                <h3>MONSTERS INC.</h3> 
+                <img src="img/Categorías/Infantil/Monsters Inc.jpg"  alt="Monsters Inc">
+                <p class="descripcion">Monsters, Incorporated es la fábrica de sustos más grande en el mundo de los monstruos y James P. Sullivan es uno de sus mejores asustadores.</p> 
+                <p><strong>Precio: 15$</strong></p> 
+                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
+            </div>
+        </section>
+        <h2>Terror</h2>
+        <section class="productos">
+            <div>
+                <h3>ANNABELLE</h3> 
+                <img src="img/Categorías/Terror/Annabelle.jpg"  alt="Annabelle">
+                <p class="descripcion">John Form encuentra el regalo perfecto para Mia, su esposa embarazada: una preciosa muñeca antigua llamada Annabelle.</p> 
+                <p><strong>Precio: 20$</strong></p> 
+                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
+            </div>
+            <div>
+                <h3>LA OUIJA</h3> 
+                <img src="img/Categorías/Terror/La ouija.jpg"  alt="La Ouija">
+                <p class="descripcion">Adolescentes despiertan involuntariamente a una oscura fuerza poderosa cuando ellos usan un tablero de Ouija para intentar comunicarse con un amigo que murió recientemente.</p> 
+                <p><strong>Precio: 25$</strong></p> 
+                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
+            </div>
+            <div>
+                <h3>LA MORGUE</h3> 
+                <img src="img/Categorías/Terror/La morgue.jpg"  alt="La morgue">
+                <p class="descripcion">Dos forenses, padre e hijo, investigan la muerte de una hermosa joven sobre la que nadie sabe nada. A medida que descubren más información, más se adentran en una telaraña de indicios y hechos extraños y desconcertantes.</p> 
+                <p><strong>Precio: 20$</strong></p> 
+                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
+            </div>
+            <div>
+                <h3>ASÍ EN LA TIERRA COMO EN EL INFIERNO</h3> 
+                <img src="img/Categorías/Terror/Asi en la tierra como en el infierno.jpg"  alt="Asi en la tierra como en el infierno">
+                <p class="descripcion">Kilómetros y kilómetros de tortuosas catacumbas yacen bajo las calles de París, plagadas de incontables almas. Cuando un equipo de exploradores se aventura en este desconocido laberinto</p> 
+                <p><strong>Precio: 15$</strong></p> 
+                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
+            </div>
+            <div>
+                <h3>LA NOCHE DEL DEMONIO: LA PUERTA ROJA</h3> 
+                <img src="img/Categorías/Terror/La noche del demonio.jpg"  alt="La noche del demonio">
+                <p class="descripcion">Nueve años después, Josh y Renai se han divorciado, Lorraine ha fallecido y Dalton ha ingresado en la universidad.</p> 
+                <p><strong>Precio: 20$</strong></p> 
+                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
+            </div>
+            <div>
+                <h3>EL CONJURO</h3> 
+                <img src="img/Categorías/Terror/El conjuro.jpg"  alt="El conjuro">
+                <p class="descripcion">A principios de los años 70, Ed y Lorrain Warren, reputados investigadores de fenómenos paranormales, se enfrentan a una entidad demoníaca al intentar ayudar a una familia que está siendo aterrorizada.</p> 
+                <p><strong>Precio: 25$</strong></p> 
+                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
+            </div>
+        </section>
+        <h2>Comedia</h2>
+        <section class="productos">
+            <div>
+                <h3>¿...Y DÓNDE ESTÁN LAS RUBIAS?</h3> 
+                <img src="img/Categorías/Comedia/Y donde estan las rubias.jpg"  alt="Y donde están las rubias">
+                <p class="descripcion">Dos torpes agentes del FBI se hacen pasar por dos chicas de la alta sociedad para investigar una serie de secuestros.</p> 
+                <p><strong>Precio: 15$</strong></p> 
+                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
+            </div>
+            <div>
+                <h3>SUPER COOL</h3> 
+                <img src="img/Categorías/Comedia/Super cool.jpg"  alt="Super cool">
+                <p class="descripcion">Seth y Evan, dos estudiantes inadaptados de preparatoria, tienen grandes esperanzas en su fiesta de graduación: los jóvenes se sienten retados por la sociedad y planean divertirse a lo grande.</p> 
+                <p><strong>Precio: 20$</strong></p> 
+                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
+            </div>
+            <div>
+                <h3>PROYECTO X</h3> 
+                <img src="img/Categorías/Comedia/Proyecto X.jpg"  alt="Proyecto X">
+                <p class="descripcion">Tres estudiantes de secundaria deciden organizar una fiesta salvaje en casa de uno de ellos, aprovechando que sus padres no están. Quieren hacer que la fiesta sea inolvidable, así que deciden grabarlo todo.</p> 
+                <p><strong>Precio: 15$</strong></p> 
+                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
+            </div>
+            <div>
+                <h3>SON COMO NIÑOS 2</h3> 
+                <img src="img/Categorías/Comedia/Son como niños.jpg"  alt="Son como niños">
+                <p class="descripcion">Tres años después de la reunión que volvió a unirlo a sus amigos de la infancia, Lenny Feder regresa junto a su familia a su pueblo natal para poder estar más cerca de sus amigos.</p> 
+                <p><strong>Precio: 20$</strong></p> 
+                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
+            </div>
+            <div>
+                <h3>LA MÁSCARA</h3> 
+                <img src="img/Categorías/Comedia/La mascara.jpg"  alt="La mascara">
+                <p class="descripcion">Una máscara antigua transforma a un monótono empleado bancario en un Romeo sonriente con poderes sobrehumanos.</p> 
+                <p><strong>Precio: 10$</strong></p> 
+                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
+            </div>
+            <div>
+                <h3>UNA ESPOSA DE MENTIRA</h3> 
+                <img src="img/Categorías/Comedia/Una esposa de mentira.jpg"  alt="Una esposa de mentira">
+                <p class="descripcion">El cirujano Danny decide contratar a su ayudante Katherine, una madre soltera con hijos, para que finjan ser su familia. </p> 
+                <p><strong>Precio: 15$</strong></p> 
+                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
+            </div>
+        </section>
+
+   
+
+<br>
     <!--Creamos el footer de la pagina-->  
     <footer>
         <!--Parte izquierda del footer-->
