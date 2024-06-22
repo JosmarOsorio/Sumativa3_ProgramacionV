@@ -1,0 +1,55 @@
+/* Inputs */
+form {
+    max-width: 420px;
+    margin: 50px auto;
+}
+
+.feedback-input {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: transparent;
+    border: 2px solid #2B5FE3;
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-shadow: 5px 7px #cccccc;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+.feedback-input:focus {
+    border: 2px solid #150257;
+}
+
+textarea {
+    height: 150px;
+    line-height: 150%;
+    resize: vertical;
+}
+
+[type="button"] {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    width: 100%;
+    background: #2B5FE3;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    box-shadow: 5px 7px #bfc5fa;
+
+    font-size: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: all 0.3s;
+    margin-top: -4px;
+    font-weight: 700;
+}
+
+[type="button"]:hover {
+    background: #150257;
+}

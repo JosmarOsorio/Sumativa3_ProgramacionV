@@ -1,0 +1,24 @@
+aside {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 2em -1em black;
+    margin-bottom: 20px;
+}
+
+.profile {
+    position: relative;
+    margin: 30px;
+}
+
+.profile header {
+    text-align: center;
+}
+
+.profile section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile h3 {
+    margin-bottom: 20px;
+}

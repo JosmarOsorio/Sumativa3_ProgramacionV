@@ -1,0 +1,38 @@
+/* Frases celebres */
+#fraseCelebre {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  #imagenPelicula {
+    width: 500px;
+    height: 400px;
+    margin-right: 20px;
+    border-radius: 15px;
+  }
+  
+  #frase {
+    font-size: 24px;
+    background-color: #b0d1e5;
+    padding: 10px;
+    flex-grow: 1;
+    font-style: italic;
+  }
+  
+  /* Media query para pantallas pequeñas */
+  @media screen and (max-width: 600px) {
+    #fraseCelebre {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    #imagenPelicula {
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
