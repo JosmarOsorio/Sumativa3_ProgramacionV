@@ -1,3 +1,4 @@
+
 .navbar {
     height: 80px;
     /* 64 + 16px */
@@ -11,13 +12,10 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    position: sticky;
-    -webkit-position: sticky;
     top: -12px;
     z-index: 1;
     color: white;
     text-align: center;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .navbar .logo {
@@ -57,8 +55,6 @@
 }
 
 .navbar nav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -80,23 +76,12 @@
 }
 
 .navbar nav ul li a:hover {
-    color: #ffffff;
     background-color: #1a2c56;
 }
 
-.navbar nav ul .close {
-    display: none;
-    text-align: right;
-    padding: 10px;
-}
 
-.navbar nav ul .close span {
-    font-size: 40px;
-    display: inline-block;
-    border: 1px solid #cccccc;
-    padding: 0 10px;
-    cursor: pointer;
-}
+
+
 
 .navbar nav .icon-bar {
     padding: 18px 8px;
@@ -117,29 +102,34 @@
     background-color: #ffffff;
     height: 2px;
 }
-/*.submenu{
-    display: none;
-    position: absolute;
-    padding: 10px;
-    list-style: none;
-    width: 500px;
-    border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.61);
-}
-.submenu li{
-    display: block;
-    padding: 5px 10px;
-}
-.nav-lists li:hover .submenu{
-    display: block;
-}*/
-
 h2 {
     color: black;
     font-size: 30px;
     text-align: center;
 }
+/**/
+.submenu {
+    display: none; /* Oculta el submenu por defecto */
+    position: absolute;
+    list-style: none;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.61);
+    z-index: 1;
+}
 
+.submenu li a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.submenu li a:hover {
+    background-color: #333; /* Ajusta el color de fondo en el hover si es necesario */
+}
+
+
+/**/
 @media only screen and (max-width: 650px) {
     .navbar {
         -webkit-box-pack: justify;
@@ -185,9 +175,7 @@ h2 {
         color: #555555;
     }
 
-    .navbar nav ul .close {
-        display: block;
-    }
+   
 
     .navbar nav .icon-bar {
         display: -webkit-box;

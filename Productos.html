@@ -14,7 +14,7 @@
     <link rel="icon" type="imag/png" href="img/iconos/logo.png">
     <link rel="stylesheet" href="https://use.typekit.net/lct6xrs.css">
 </head>
-
+<script src="js/Submenu.js"></script>
 <body>
     <header class="navbar">
         <div class="logo">
@@ -28,17 +28,18 @@
             </div>
             <!--Creamos el menu de navegacion de la pagina-->
             <ul id="nav-lists">
-                <li class="close"><span onclick="Hide()"></span></li>
-                <li><a href="index.html">Pagina Principal</a></li>
-                <li><a href="#">Categorías</a>
-                    <!--<ul class="submenu">
-                        <li><a href="#">Ciencia ficción</a></li>
-                        <li><a href="#">Drama</a></li>
-                        <li><a href="#">Infantil</a></li>
-                        <li><a href="#">Terror</a></li>
-                        <li><a href="#">Comedia</a></li>
-                    </ul> -->
+                <li class="close"></li>
+                <li>
+                    <a href="#" onclick="event.preventDefault(); toggleSubmenu(event);">Categorías</a>
+                    <ul class="submenu">
+                        <li><a href="#Ciencia">Ciencia ficción</a></li>
+                        <li><a href="#Drama">Drama</a></li>
+                        <li><a href="#Infantil">Infantil</a></li>
+                        <li><a href="#Terror">Terror</a></li>
+                        <li><a href="#Comedia">Comedia</a></li>
+                    </ul>
                 </li>
+                <li><a href="index.html">Pagina Principal</a></li>
             </ul>
         </nav>
     </header>
@@ -97,10 +98,10 @@
             </div>
     </div>
     <h1 class="tituloProductos">Categorías</h1><br> 
-    <h2>Ciencia ficción</h2>
+    <h2 id="Ciencia">Ciencia ficción</h2>
         <section class="productos">
 
-            <div> 
+            <div > 
                 <h3>ALICIA EN EL PAÍS DE LAS MARAVILLAS</h3> 
                 <img src="img/Categorías/Ciencia ficción/Alicia en el pais de las Maravillas.jpg"  alt="Alicia en el pais de las Maravillas">
                 <p class="descripcion">Alicia, ahora una joven de 19 años de edad, regresa al País de las Maravillas para encontrar su verdadero destino y terminar con el gobierno de terror de la malvada reina Roja.</p> 
@@ -115,7 +116,7 @@
                 <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
             </div>
             <div>
-                <h3>HARRY POTTER Y LA PIEDRA SILOSOFAL</h3> 
+                <h3>HARRY POTTER Y LA PIEDRA FILOSOFAL</h3> 
                 <img src="img/Categorías/Ciencia ficción/Harry Potter.jpg"  alt="Harry Potter">
                 <p class="descripcion">En su cumpleaños, Harry Potter descubre que es hijo de dos magos y que tiene poderes mágicos. Debe asistir a la famosa escuela de magia y hechicería Hogwarts, donde hace amistad con dos jóvenes.</p> 
                 <p><strong>Precio: 15$</strong></p> 
@@ -148,7 +149,7 @@
     </section>
 
 
-        <h2>Drama</h2>
+        <h2 id="Drama">Drama</h2>
         <section class="productos">
             <div>
                 <h3>EL PADRINO</h3> 
@@ -195,7 +196,7 @@
                 
             </div>
         </section>
-        <h2>Infantil</h2>
+        <h2 id="Infantil">Infantil</h2>
         <section class="productos"> 
             <div>
                 <h3>TOY STORY</h3> 
@@ -212,9 +213,9 @@
                 <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
             </div>
             <div>
-                <h3>INTENSAMENTE</h3> 
+                <h3>INTENSAMENTE 2</h3> 
                 <img src="img/Categorías/Infantil/Intensamente.jpg"  alt="Intensamente">
-                <p class="descripcion">Las cinco emociones que conviven en el interior de una niña llamada Riley, alegría, miedo, desagrado, ira y tristeza, compiten por tomar el control de sus acciones. </p> 
+                <p class="descripcion">Riley, ahora con 13 años y a punto de entrar al instituto, vive cambios en su mente: sus emociones crearon el "Sentido de Identidad" para afrontar la adolescencia </p> 
                 <p><strong>Precio: 25$</strong></p> 
                 <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
             </div>
@@ -240,7 +241,7 @@
                 <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
             </div>
         </section>
-        <h2>Terror</h2>
+        <h2 id="Terror">Terror</h2>
         <section class="productos">
             <div>
                 <h3>ANNABELLE</h3> 
@@ -285,7 +286,7 @@
                 <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
             </div>
         </section>
-        <h2>Comedia</h2>
+        <h2 id="Comedia">Comedia</h2>
         <section class="productos">
             <div>
                 <h3>¿...Y DÓNDE ESTÁN LAS RUBIAS?</h3> 
