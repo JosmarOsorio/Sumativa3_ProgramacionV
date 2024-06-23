@@ -16,6 +16,8 @@
     z-index: 1;
     color: white;
     text-align: center;
+    position: fixed;
+    top: 0;
 }
 
 .navbar .logo {
