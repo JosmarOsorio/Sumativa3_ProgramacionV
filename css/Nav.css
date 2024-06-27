@@ -1,198 +1,28 @@
-
 .navbar {
-    height: 80px;
-    /* 64 + 16px */
-    width: 100%;
     background-color: #2B5FE3;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    top: -12px;
-    z-index: 1;
-    color: white;
-    text-align: center;
-    position: fixed;
-    top: 0;
-}
-
-.navbar .logo {
-    max-width: 250px;
-    padding: 0 10px;
-    overflow: hidden;
-}
-
-.navbar .logo a {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    height: 60px;
-}
-
-.navbar .logo a img {
-    max-width: 100%;
-    max-height: 60px;
-}
-
-.navbar nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    padding: 0 10px;
-    justify-content: flex-end;
-}
-
-.navbar nav ul {
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar nav ul li a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 14px;
-    text-transform: uppercase;
-    display: block;
-    height: 60px;
-    line-height: 60px;
-    cursor: pointer;
-    padding: 0 20px;
 }
 
 .navbar nav ul li a:hover {
-    background-color: #1a2c56;
+    background-color: #1a2c56c2;
+}
+.btn-personalizado{
+    background-color: #74bde783!important;
+    color: white!important; 
+    border-color: #05112c!important;
+}
+.btn-personalizado:hover{
+    background-color: #1a2c56c2!important;
 }
 
-
-
-
-
-.navbar nav .icon-bar {
-    padding: 18px 8px;
-    width: 50px;
-    height: 60px;
-    display: none;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    cursor: pointer;
-}
-
-.navbar nav .icon-bar i {
-    background-color: #ffffff;
-    height: 2px;
-}
 h2 {
     color: black;
     font-size: 30px;
     text-align: center;
 }
-/**/
-.submenu {
-    display: none; /* Oculta el submenu por defecto */
-    position: absolute;
-    list-style: none;
-    width: 200px;
-    background-color: rgba(0, 0, 0, 0.61);
-    z-index: 1;
-}
-
-.submenu li a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.submenu li a:hover {
-    background-color: #333; /* Ajusta el color de fondo en el hover si es necesario */
-}
-
-
-/**/
-@media only screen and (max-width: 650px) {
-    .navbar {
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-    }
-
-    .navbar .logo {
-        -webkit-box-flex: 1;
-        -ms-flex: 1;
-        flex: 1;
-    }
-
-    .navbar nav {
-        -webkit-box-flex: 0;
-        -ms-flex: 0;
-        flex: 0;
-    }
-
-    .navbar nav ul {
-        -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-        position: fixed;
-        left: 100%;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        background: #ffffff;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        -webkit-transition: left .3s;
-        -o-transition: left .3s;
-        transition: left .3s;
-    }
-
-    .navbar nav ul li a {
-        padding: 10px;
-        font-size: 16px;
-        height: auto;
-        line-height: normal;
-        color: #555555;
-    }
-
-   
-
-    .navbar nav .icon-bar {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-    }
-
-    .navbar nav ._Menus-show {
-        left: 0;
-    }
-}
-
 article .group {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
 }
+
