@@ -12,22 +12,24 @@ signInForm.addEventListener("submit", async (e) => {
     const userCredentials = await signInWithEmailAndPassword(auth, email, password)
     console.log(userCredentials)
 
-    // Close the login modal
+    // Cerrar la ventana modal de inicio de sesión
     const modal = bootstrap.Modal.getInstance(signInForm.closest('.modal'));
     modal.hide();
 
-    // reset the form
+    // Reiniciar el formulario
     signInForm.reset();
 
-    // show welcome message
-    showMessage("Welcome" + userCredentials.user.email);
+    // Mostrar mensaje de bienvenida
+    Swal.fire({
+      title: "Bienvenido!",
+      text: "Se ha iniciado sesión con exito",
+      icon: "success"
+    });
+    document.querySelector("#error-message-signIn").textContent = ""; 
+
   } catch (error) {
-    if (error.code === 'auth/wrong-password') {
-      showMessage("Wrong password", "error")
-    } else if (error.code === 'auth/user-not-found') {
-      showMessage("User not found", "error")
-    } else {
-      showMessage("Something went wrong", "error")
-    }
+    document.querySelector("#error-message-signIn").textContent = "Ha ocurrido un error. Por favor, revise sus credenciales e inténtelo de nuevo.";   
   }
 });
+
+

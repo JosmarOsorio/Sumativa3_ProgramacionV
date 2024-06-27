@@ -20,19 +20,23 @@ signUpForm.addEventListener("submit", async (e) => {
       // reset the form
       signUpForm.reset();
   
-      // show welcome message
-      showMessage("Welcome" + userCredentials.user.email);
+      // show success message
+      Swal.fire({
+        title: "Usuario registrado, bienvenido!",
+        text: "Su usuario ha sido registrado con exito",
+        icon: "success"
+      });
+      document.querySelector("#error-message-SignUp").textContent = ""; 
   
     } catch (error) {
       if (error.code === 'auth/email-already-in-use') {
-        showMessage("Email already in use", "error")
+        document.querySelector("#error-message-SignUp").textContent = "Este email ya se encuentra en uso, por favor use otro.";
       } else if (error.code === 'auth/invalid-email') {
-        showMessage("Invalid email", "error")
+        document.querySelector("#error-message-SignUp").textContent = "Este email no es valido, por favor ingrese uno valido.";
       } else if (error.code === 'auth/weak-password') {
-        showMessage("Weak password", "error")
+        document.querySelector("#error-message-SignUp").textContent = "La contraseña ingresada es muy debil por favor ingrese otra contraseña.";
       } else if (error.code) {
-        showMessage("Something went wrong", "error")
+        document.querySelector("#error-message-SignUp").textContent = "ha ocurrdio un error, por favor revise el correo y la contraseña e intentelo de nuevo.";
       }
     }
-  
-  });
+});

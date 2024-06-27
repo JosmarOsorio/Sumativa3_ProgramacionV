@@ -7,8 +7,16 @@ logout.addEventListener("click", async (e) => {
   e.preventDefault();
   try {
     await signOut(auth)
-    alert("haz cerrado sesion con exito");
+    Swal.fire({
+      title: "Sesión cerrada",
+      text: "Se ha cerrado sesión con exito!",
+      icon: "success"
+    });
   } catch (error) {
-    console.log(error)
+    Swal.fire({
+      title: "Ha ocurrido un eror",
+      text: "Ha habido un problema al cerrar sesión por favor intente de nuevo",
+      icon: "error"
+    });
   }
 });
