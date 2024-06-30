@@ -1,8 +1,18 @@
+body{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+    min-width: 100;
+}
 .tituloProductos {
     margin: 10px; 
     font-family: "archivo-black", sans-serif;
     font-weight: 400;
     font-style: normal;
+    color: #01060A;
 }
 
 .productos  {
@@ -58,17 +68,39 @@
     font-family: "germania-one", serif;
     font-weight: 400;
     font-style: normal;
-    text-decoration: underline blue;
 }
-body{
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
+#Ciencia{
+    text-decoration: underline #2B5FE3;
 }
-html{
-    scroll-behavior: smooth;
-    min-width: 100;
+#Ciencia-sec div:hover {
+    box-shadow: 0 0 10px #2B5FE3;    
 }
+
+#Drama{
+    text-decoration: underline red;
+}
+#Drama-sec div:hover {
+    box-shadow: 0 0 10px red;    
+}
+#Infantil{
+    text-decoration: underline yellow;
+}
+#Infantil-sec div:hover {
+    box-shadow: 0 0 10px yellow;    
+}
+#Terror{
+    text-decoration: underline black;
+}
+#Terror-sec div:hover {
+    box-shadow: 0 0 10px black;    
+}
+#Comedia{
+    text-decoration: underline green;
+}
+#Comedia-sec div:hover {
+    box-shadow: 0 0 10px green;    
+}
+
 
 
 

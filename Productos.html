@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
-    <meta name="keywords" content="Hollister, Pantalones, Camisas, Sudaderas, Vestidos">
     <link rel="stylesheet" href="css/Footer.css">
     <link rel="stylesheet" href="css/Productos.css">
     <link rel="stylesheet" href="css/General.css">
@@ -13,8 +12,9 @@
     <link rel="stylesheet" href="css/Slider.css">
     <link rel="icon" type="imag/png" href="img/iconos/logo.png">
     <link rel="stylesheet" href="https://use.typekit.net/lct6xrs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
 </head>
 <body>
     <header class="navbar">
@@ -44,11 +44,11 @@
                         <li><a class="nav-link logged-out" href="#" data-bs-toggle="modal" data-bs-target="#signinModal" style="color: white;">Sign In</a></li>
                         <li><a class="nav-link logged-out" href="#" data-bs-toggle="modal" data-bs-target="#signupModal"style="color: white;">Sign Up</a></li>
                         <li><a class="nav-link logged-in" href="#" id="logout"style="color: white;">Logout</a></li>
+                        <li><a class="nav-link active" aria-current="page" href="carrito.html">
+                            <svg class="carrito-nav" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>
+                        </a></li>
+                        
                 </ul>
-                <form class="d-flex " role="search" >
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success btn-personalizado" type="submit">Search</button>
-                </form>
               </div>
             </div>
             <div class="icon-bar" onclick="Show()">
@@ -56,6 +56,7 @@
                 <i></i>
                 <i></i>
             </div>
+            
 
         </nav>
     </header>
@@ -166,14 +167,14 @@ aria-hidden="true">
     </div>
     <h1 class="tituloProductos">Categorías</h1><br> 
     <h2 id="Ciencia" class="TitulosCategorias">Ciencia ficción</h2>
-        <section class="productos">
+        <section id="Ciencia-sec" class="productos">
 
-            <div > 
-                <h3>ALICIA EN EL PAÍS DE LAS MARAVILLAS</h3> 
+            <div class="pelicula"> 
+                <h3 class="tituloPelicula">ALICIA EN EL PAÍS DE LAS MARAVILLAS</h3> 
                 <img src="img/Categorías/Ciencia ficción/Alicia en el pais de las Maravillas.jpg"  alt="Alicia en el pais de las Maravillas">
                 <p class="descripcion">Alicia, ahora una joven de 19 años de edad, regresa al País de las Maravillas para encontrar su verdadero destino y terminar con el gobierno de terror de la malvada reina Roja.</p> 
-                <p><strong>Precio: 10$</strong></p> 
-                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
+                <h4>Precio:<span class="precio"> 10$</span></h4> 
+                <button  class="btn btn-primary button">Añadir a Carrito</button>
             </div>
             <div>
                 <h3>AVENGERS: ENDGAME</h3> 
@@ -217,7 +218,7 @@ aria-hidden="true">
 
 
         <h2 id="Drama" class="TitulosCategorias">Drama</h2>
-        <section class="productos">
+        <section id="Drama-sec" class="productos">
             <div>
                 <h3>EL PADRINO</h3> 
                 <img src="img/Categorías/Drama/El padrino.jpg"  alt="El padrino">
@@ -264,7 +265,7 @@ aria-hidden="true">
             </div>
         </section>
         <h2 id="Infantil" class="TitulosCategorias">Infantil</h2>
-        <section class="productos"> 
+        <section id="Infantil-sec" class="productos"> 
             <div>
                 <h3>TOY STORY</h3> 
                 <img src="img/Categorías/Infantil/Toy story.jpg"  alt="Toy Story">
@@ -309,7 +310,7 @@ aria-hidden="true">
             </div>
         </section>
         <h2 id="Terror" class="TitulosCategorias">Terror</h2>
-        <section class="productos">
+        <section id="Terror-sec" class="productos">
             <div>
                 <h3>ANNABELLE</h3> 
                 <img src="img/Categorías/Terror/Annabelle.jpg"  alt="Annabelle">
@@ -354,7 +355,7 @@ aria-hidden="true">
             </div>
         </section>
         <h2 id="Comedia" class="TitulosCategorias">Comedia</h2>
-        <section class="productos">
+        <section id="Comedia-sec" class="productos">
             <div>
                 <h3>¿...Y DÓNDE ESTÁN LAS RUBIAS?</h3> 
                 <img src="img/Categorías/Comedia/Y donde estan las rubias.jpg"  alt="Y donde están las rubias">
@@ -443,5 +444,9 @@ aria-hidden="true">
     <script type="module" src="/js/signinForm.js"></script>
     <script type="module" src="/js/logout.js"></script>
     <script type="module" src="/js/loginCheck.js"></script>
+    <script src="/js/carrito.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/nav.js"></script>
 </body>
 </html>

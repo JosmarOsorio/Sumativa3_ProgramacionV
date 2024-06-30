@@ -1,5 +1,5 @@
 footer {
-    background: #2B5FE3;
+    background: #036280;
     padding: 8px;
     color: #eee;
     display: flex;
@@ -106,17 +106,17 @@ footer #social-media-footer ul li {
 
     footer #right-footer {
         background: #eee;
-        color: #2B5FE3;
+        color: #036280;
     }
 
     footer #right-footer a {
-        color: #2B5FE3;
+        color: #036280;
     }
 
     footer #social-media-footer a .fa-facebook,
     footer #social-media-footer a .fa-instagram,
     footer #social-media-footer a .fa-github {
-        color: #2B5FE3;
+        color: #036280;
         transition: 0.4s;
     }
 

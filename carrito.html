@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/General.css">
+    <link rel="stylesheet" href="css/Footer.css">
+    <link rel="stylesheet" href="css/Nav.css">
+    <link rel="icon" type="imag/png" href="img/iconos/logo.png">
+    <link rel="stylesheet" href="css/carrito.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <a href="#"><img src="img/iconos/logo.png" alt="logo" style="max-width: 100%;
+    max-height: 60px;"></a>
+        </div>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html" style="color: white;">Página Principal</a>
+                        <li><a class="nav-link active" aria-current="page" href="Productos.html" style="color: white;">Productos</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="icon-bar" onclick="Show()">
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>
+
+        </nav>
+    </header>
+
+<section class="carrito">
+    <br>
+    <table class="table">
+        <thead>
+          <tr class="text-primary">
+            <th scope="col">#</th>
+            <th scope="col">Productos</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Cantidad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td class="table__productos">
+                <img src="img/Posters/Alicia en el pais de las Maravillas.jpg" alt="">
+                <h6 class="title">titulo</h6>
+            </td>
+            <td class="table__price"><p>10$</p></td>
+            <td class="table__cantidad">
+                <input class="contador" type="number" min="1" value="1">
+                <button class="delete btn btn-danger">X</button>
+            </td>
+          </tr>
+          <tr>
+        </tbody>
+      </table>
+      <br><br>
+      <div class="row mx-4">
+        <div class="col">
+            <h3 class="itemCartTotal">Total: 0</h3>
+        </div>
+        <div class="col d-flex justify-content-end">
+            <button class="btn btn-success">COMPRAR</button>
+        </div>
+      </div>
+      <br>
+</section>
+
+    <footer>
+        <!--Parte izquierda del footer-->
+        <div id="left-footer"><!--Creamos un menu de navegacion simple para navegar desde el footer-->
+            <h3>Atajos</h3>
+            <ul class="atajos">
+                <li><a href="index.html">Pagina Principal</a></li>
+            </ul>
+        </div>
+        <!--Creamos la parte derecha del footer-->
+        <div id="right-footer"><!--Creamos un menu para compartir las redes sociales-->
+            <h3>Sígenos en</h3>
+            <div id="social-media-footer">
+                <ul>
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/?locale=es_LA" target="_blank">
+                            <img class="icono" src="img/iconos/facebook.png" alt="icono facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.instagram.com" target="_blank">
+                            <img class="icono" src="img/iconos/instragram.png" alt="icono instagram">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.whatsapp.com/?lang=es_LA" target="_blank">
+                            <img class="icono" src="img/iconos/whatsapp.png" alt="icono whatsapp">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <p>Sitio web desarrollado por Josmar Osorio y Stephania Salmerón</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/js/carrito.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/nav.js"></script
+</body>
+</html>
