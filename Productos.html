@@ -41,13 +41,12 @@
                               <li><a class="dropdown-item" href="#Comedia">Comedia</a></li>
                             </ul>
                           </li>
-                        <li><a class="nav-link logged-out" href="#" data-bs-toggle="modal" data-bs-target="#signinModal" style="color: white;">Sign In</a></li>
-                        <li><a class="nav-link logged-out" href="#" data-bs-toggle="modal" data-bs-target="#signupModal"style="color: white;">Sign Up</a></li>
-                        <li><a class="nav-link logged-in" href="#" id="logout"style="color: white;">Logout</a></li>
-                        <li><a class="nav-link active" aria-current="page" href="carrito.html">
+                          <div class="carrito"><li><a class="nav-link active cart" aria-current="page" href="#" onclick="mostrarCarrito()"><span id="cuenta-carrito">0</span>
                             <svg class="carrito-nav" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>
-                        </a></li>
-                        
+                            </a></li></div>
+                        <li><a class="nav-link logged-out" href="#" data-bs-toggle="modal" data-bs-target="#signinModal" style="color: white;">Iniciar Sesión</a></li>
+                        <li><a class="nav-link logged-out" href="#" data-bs-toggle="modal" data-bs-target="#signupModal"style="color: white;">Crear Cuenta</a></li>
+                        <li><a class="nav-link logged-in" href="#" id="logout"style="color: white;">Cerrar Sesión</a></li>   
                 </ul>
               </div>
             </div>
@@ -61,13 +60,13 @@
         </nav>
     </header>
 
-<!-- Modal -->
+<!-- Ventana modal Crear cuenta -->
 <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
 aria-hidden="true">
 <div class="modal-dialog">
   <div class="modal-content">
     <div class="modal-header">
-      <h3>SignUp</h3>
+      <h3>Crear cuenta</h3>
       <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
     <div class="modal-body p-5">
@@ -87,12 +86,13 @@ aria-hidden="true">
 </div>
 </div>
 
+<!-- Ventana modal Iniciar sesion -->
 <div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalSignin"
 aria-hidden="true">
 <div class="modal-dialog">
   <div class="modal-content">
     <div class="modal-header">
-      <h3>SignIn</h3>
+      <h3>Iniciar sesión</h3>
       <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
     <div class="modal-body">
@@ -109,6 +109,25 @@ aria-hidden="true">
   </div>
 </div>
 </div>
+
+<!-- Ventana modal carrito -->
+<div class="modal" tabindex="-1" id="carritoModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Carrito de compras</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="cerrarModal()"></button>
+        </div>
+        <div class="modal-body" id="modal-body">
+          <!-- Contenido del carrito se actualizará dinámicamente aquí -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="restablecerCarrito()">Restablecer lista</button>
+          <button type="button" class="btn btn-primary">Comprar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
     <div class="slider">
@@ -167,239 +186,239 @@ aria-hidden="true">
     </div>
     <h1 class="tituloProductos">Categorías</h1><br> 
     <h2 id="Ciencia" class="TitulosCategorias">Ciencia ficción</h2>
-        <section id="Ciencia-sec" class="productos">
+    <section id="Ciencia-sec" class="productos">
 
-            <div class="pelicula"> 
-                <h3 class="tituloPelicula">ALICIA EN EL PAÍS DE LAS MARAVILLAS</h3> 
-                <img src="img/Categorías/Ciencia ficción/Alicia en el pais de las Maravillas.jpg"  alt="Alicia en el pais de las Maravillas">
-                <p class="descripcion">Alicia, ahora una joven de 19 años de edad, regresa al País de las Maravillas para encontrar su verdadero destino y terminar con el gobierno de terror de la malvada reina Roja.</p> 
-                <h4>Precio:<span class="precio"> 10$</span></h4> 
-                <button  class="btn btn-primary button">Añadir a Carrito</button>
-            </div>
-            <div>
-                <h3>AVENGERS: ENDGAME</h3> 
-                <img src="img/Categorías/Ciencia ficción/Avengers Endgame.jpg"  alt="Avengers Endgame">
-                <p class="descripcion">Los Vengadores restantes deben encontrar una manera de recuperar a sus aliados para un enfrentamiento épico con Thanos, el malvado que diezmó el planeta y el universo.</p> 
-                <p><strong>Precio: 20$</strong></p> 
-                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
-            </div>
-            <div>
-                <h3>HARRY POTTER Y LA PIEDRA FILOSOFAL</h3> 
-                <img src="img/Categorías/Ciencia ficción/Harry Potter.jpg"  alt="Harry Potter">
-                <p class="descripcion">En su cumpleaños, Harry Potter descubre que es hijo de dos magos y que tiene poderes mágicos. Debe asistir a la famosa escuela de magia y hechicería Hogwarts, donde hace amistad con dos jóvenes.</p> 
-                <p><strong>Precio: 15$</strong></p> 
-                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
-            </div>
-            <div>
-                <h3>STAR WARS</h3> 
-                <img src="img/Categorías/Ciencia ficción/Star Wars.jpg"  alt="Star Wars">
-                <p class="descripcion">Obi-Wan Kenobi es un joven aprendiz caballero Jedi bajo la tutela de Qui-Gon Jinn; Anakin Skywalker, quien después será padre de Luke Skywalker y se convertirá en Darth Vader, solamente es un niño de 9 años.</p> 
-                <p><strong>Precio: 20$</strong></p> 
-                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
-                
-            </div>
-            <div>
-                <h3>TERMINATOR</h3> 
-                <img src="img/Categorías/Ciencia ficción/Terminator 2.jpg"  alt="Terminator">
-                <p class="descripcion">Un asesino cibernético del futuro es enviado a Los Ángeles para matar a la mujer que procreará a un líder.</p> 
-                <p><strong>Precio: 10$</strong></p> 
-                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
-                
-            </div>
-            <div>
-                <h3>INTERESTELLAR</h3> 
-                <img src="img/Categorías/Ciencia ficción/Interestellar.jpg"  alt="Interestellar">
-                <p class="descripcion">Gracias a un descubrimiento, un grupo de científicos y exploradores, encabezados por Cooper, se embarcan en un viaje espacial para encontrar un lugar con las condiciones necesarias para reemplazar a la Tierra y comenzar una nueva vida allí.</p> 
-                <p><strong>Precio: 25$</strong></p> 
-                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
-                
-            </div>    
+        <div > 
+            <h3>ALICIA EN EL PAÍS DE LAS MARAVILLAS</h3> 
+            <img src="img/Categorías/Ciencia ficción/Alicia en el pais de las Maravillas.jpg"  alt="Alicia en el pais de las Maravillas">
+            <p class="descripcion">Alicia, ahora una joven de 19 años de edad, regresa al País de las Maravillas para encontrar su verdadero destino y terminar con el gobierno de terror de la malvada reina Roja.</p> 
+            <p><strong>Precio: 10$</strong></p> 
+            <a class="botonesProductos" onclick="agregarProducto('ALICIA EN EL PAÍS DE LAS MARAVILLAS', 10)">Agregrar pelicula a carrito</a> 
+        </div>
+        <div>
+            <h3>AVENGERS: ENDGAME</h3> 
+            <img src="img/Categorías/Ciencia ficción/Avengers Endgame.jpg"  alt="Avengers Endgame">
+            <p class="descripcion">Los Vengadores restantes deben encontrar una manera de recuperar a sus aliados para un enfrentamiento épico con Thanos, el malvado que diezmó el planeta y el universo.</p> 
+            <p><strong>Precio: 20$</strong></p> 
+            <a class="botonesProductos" onclick="agregarProducto('AVENGERS: ENDGAME', 20)">Agregrar pelicula a carrito</a> 
+        </div>
+        <div>
+            <h3>HARRY POTTER Y LA PIEDRA FILOSOFAL</h3> 
+            <img src="img/Categorías/Ciencia ficción/Harry Potter.jpg"  alt="Harry Potter">
+            <p class="descripcion">En su cumpleaños, Harry Potter descubre que es hijo de dos magos y que tiene poderes mágicos. Debe asistir a la famosa escuela de magia y hechicería Hogwarts, donde hace amistad con dos jóvenes.</p> 
+            <p><strong>Precio: 15$</strong></p> 
+            <a class="botonesProductos" onclick="agregarProducto('HARRY POTTER Y LA PIEDRA FILOSOFAL', 15)">Agregrar pelicula a carrito</a> 
+        </div>
+        <div>
+            <h3>STAR WARS</h3> 
+            <img src="img/Categorías/Ciencia ficción/Star Wars.jpg"  alt="Star Wars">
+            <p class="descripcion">Obi-Wan Kenobi es un joven aprendiz caballero Jedi bajo la tutela de Qui-Gon Jinn; Anakin Skywalker, quien después será padre de Luke Skywalker y se convertirá en Darth Vader, solamente es un niño de 9 años.</p> 
+            <p><strong>Precio: 20$</strong></p> 
+            <a class="botonesProductos" onclick="agregarProducto('STAR WARS', 20)">Agregrar pelicula a carrito</a> 
+            
+        </div>
+        <div>
+            <h3>TERMINATOR</h3> 
+            <img src="img/Categorías/Ciencia ficción/Terminator 2.jpg"  alt="Terminator">
+            <p class="descripcion">Un asesino cibernético del futuro es enviado a Los Ángeles para matar a la mujer que procreará a un líder.</p> 
+            <p><strong>Precio: 10$</strong></p> 
+            <a class="botonesProductos" onclick="agregarProducto('TERMINATOR', 10)">Agregrar pelicula a carrito</a> 
+            
+        </div>
+        <div>
+            <h3>INTERESTELLAR</h3> 
+            <img src="img/Categorías/Ciencia ficción/Interestellar.jpg"  alt="Interestellar">
+            <p class="descripcion">Gracias a un descubrimiento, un grupo de científicos y exploradores, encabezados por Cooper, se embarcan en un viaje espacial para encontrar un lugar con las condiciones necesarias para reemplazar a la Tierra y comenzar una nueva vida allí.</p> 
+            <p><strong>Precio: 25$</strong></p> 
+            <a class="botonesProductos" onclick="agregarProducto('INTERESTELLAR', 25)">Agregrar pelicula a carrito</a> 
+            
+        </div>   
+    </section> 
+
+
+    <h2 id="Drama" class="TitulosCategorias">Drama</h2>
+    <section id="Drama-sec" class="productos">
+        <div>
+            <h3>EL PADRINO</h3> 
+            <img src="img/Categorías/Drama/El padrino.jpg"  alt="El padrino">
+            <p class="descripcion">la vida de don Vito Corleone, el capo más respetado de Nueva York, de todas sus estrategias y los caminos del hijo que lo sucederá, de quien heredará su imperio, con ecos shakespereanos.</p> 
+            <p><strong>Precio: 15$</strong></p> 
+            <a class="botonesProductos" onclick="agregarProducto('EL PADRINO', 15)">Agregrar pelicula a carrito</a> 
+            
+        </div>
+        <div>
+            <h3>TITANIC</h3> 
+            <img src="img/Categorías/Drama/Titanic.jpg"  alt="Titanic">
+            <p class="descripcion">Una joven de la alta sociedad abandona a su arrogante pretendiente por un artista humilde en el trasatlántico que se hundió durante su viaje inaugural.</p> 
+            <p><strong>Precio: 10$</strong></p> 
+            <a class="botonesProductos" onclick="agregarProducto('TITANIC', 10)">Agregrar pelicula a carrito</a> 
+        </div>
+        <div>
+            <h3>HASTA EL ÚLTIMO HOMBRE</h3> 
+            <img src="img/Categorías/Drama/Hasta el último hombre.jpg"  alt="Hasta el último hombre">
+            <p class="descripcion">La historia de Desmond T. Doss, quien, debido a que se lo prohibía su fe, combatió en la Segunda Guerra Mundial sin portar un arma. No disparó ni una bala, pero salvó a 75 personas de la muerte.</p> 
+            <p><strong>Precio: 20$</strong></p> 
+            <a class="botonesProductos" onclick="agregarProducto('HASTA EL ÚLTIMO HOMBRE', 20)">Agregrar pelicula a carrito</a> 
+        </div>
+        <div>
+            <h3>LO IMPOSIBLE</h3> 
+            <img src="img/Categorías/Drama/Lo imposible.jpg"  alt=" Lo imposible">
+            <p class="descripcion">María, Henry y sus tres hijos pequeños vuelan desde Japón a Tailandia para pasar las vacaciones de Navidad en la playa. La mañana después de Navidad, mientras se bañan en la piscina, un tsunami colosal destroza el hotel y gran parte de la costa del sudeste asiático</p> 
+            <p><strong>Precio: 15$</strong></p> 
+            <a class="botonesProductos" onclick="agregarProducto('LO IMPOSIBLE', 15)">Agregrar pelicula a carrito</a> 
+        </div>
+        <div>
+            <h3>FORREST GUMP</h3> 
+            <img src="img/Categorías/Drama/Forrest gump.jpg"  alt="Foorest gump">
+            <p class="descripcion">Forrest Gump, un joven sureño, tenaz e inocente, es protagonista de acontecimientos cruciales en la historia de los Estados Unidos.</p> 
+            <p><strong>Precio: 10$</strong></p> 
+            <a class="botonesProductos" onclick="agregarProducto('FORREST GUMP', 10)">Agregrar pelicula a carrito</a> 
+        </div>
+        <div>
+            <h3>ATRACCIÓN PELIGROSA</h3> 
+            <img src="img/Categorías/Drama/Atracción peligrosa.jpg"  alt="Atracción peligrosa">
+            <p class="descripcion">La gerente de un banco no se da cuenta de que su nuevo y encantador galán es el mismo hombre que unos días antes la mantuvo secuestrada durante un robo.</p> 
+            <p><strong>Precio: 15$</strong></p> 
+            <a class="botonesProductos" onclick="agregarProducto('ATRACCIÓN PELIGROSA', 15)">Agregrar pelicula a carrito</a> 
+            
+        </div>
     </section>
-
-
-        <h2 id="Drama" class="TitulosCategorias">Drama</h2>
-        <section id="Drama-sec" class="productos">
-            <div>
-                <h3>EL PADRINO</h3> 
-                <img src="img/Categorías/Drama/El padrino.jpg"  alt="El padrino">
-                <p class="descripcion">la vida de don Vito Corleone, el capo más respetado de Nueva York, de todas sus estrategias y los caminos del hijo que lo sucederá, de quien heredará su imperio, con ecos shakespereanos.</p> 
-                <p><strong>Precio: 15$</strong></p> 
-                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
-                
-            </div>
-            <div>
-                <h3>TITANIC</h3> 
-                <img src="img/Categorías/Drama/Titanic.jpg"  alt="Titanic">
-                <p class="descripcion">Una joven de la alta sociedad abandona a su arrogante pretendiente por un artista humilde en el trasatlántico que se hundió durante su viaje inaugural.</p> 
-                <p><strong>Precio: 10$</strong></p> 
-                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
-            </div>
-            <div>
-                <h3>HASTA EL ÚLTIMO HOMBRE</h3> 
-                <img src="img/Categorías/Drama/Hasta el último hombre.jpg"  alt="Hasta el último hombre">
-                <p class="descripcion">La historia de Desmond T. Doss, quien, debido a que se lo prohibía su fe, combatió en la Segunda Guerra Mundial sin portar un arma. No disparó ni una bala, pero salvó a 75 personas de la muerte.</p> 
-                <p><strong>Precio: 20$</strong></p> 
-                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
-            </div>
-            <div>
-                <h3>LO IMPOSIBLE</h3> 
-                <img src="img/Categorías/Drama/Lo imposible.jpg"  alt=" Lo imposible">
-                <p class="descripcion">María, Henry y sus tres hijos pequeños vuelan desde Japón a Tailandia para pasar las vacaciones de Navidad en la playa. La mañana después de Navidad, mientras se bañan en la piscina, un tsunami colosal destroza el hotel y gran parte de la costa del sudeste asiático</p> 
-                <p><strong>Precio: 15$</strong></p> 
-                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
-            </div>
-            <div>
-                <h3>FORREST GUMP</h3> 
-                <img src="img/Categorías/Drama/Forrest gump.jpg"  alt="Foorest gump">
-                <p class="descripcion">Forrest Gump, un joven sureño, tenaz e inocente, es protagonista de acontecimientos cruciales en la historia de los Estados Unidos.</p> 
-                <p><strong>Precio: 10$</strong></p> 
-                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
-            </div>
-            <div>
-                <h3>ATRACCIÓN PELIGROSA</h3> 
-                <img src="img/Categorías/Drama/Atracción peligrosa.jpg"  alt="Atracción peligrosa">
-                <p class="descripcion">La gerente de un banco no se da cuenta de que su nuevo y encantador galán es el mismo hombre que unos días antes la mantuvo secuestrada durante un robo.</p> 
-                <p><strong>Precio: 15$</strong></p> 
-                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
-                
-            </div>
-        </section>
-        <h2 id="Infantil" class="TitulosCategorias">Infantil</h2>
-        <section id="Infantil-sec" class="productos"> 
-            <div>
-                <h3>TOY STORY</h3> 
-                <img src="img/Categorías/Infantil/Toy story.jpg"  alt="Toy Story">
-                <p class="descripcion">Woody, el juguete favorito de Andy, se siente amenazado por la inesperada llegada de Buzz Lightyear, el guardián del espacio.</p> 
-                <p><strong>Precio: 20$</strong></p> 
-                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
-            </div>
-            <div>
-                <h3>EL REY LEÓN</h3> 
-                <img src="img/Categorías/Infantil/El rey Leon.jpg"  alt="El rey Leon">
-                <p class="descripcion">El joven Simba, hijo del rey Mufasa, debe luchar contra su malvado tío Scar para ocupar el trono que dejó su padre asesinado.</p> 
-                <p><strong>Precio: 10$</strong></p> 
-                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
-            </div>
-            <div>
-                <h3>INTENSAMENTE 2</h3> 
-                <img src="img/Categorías/Infantil/Intensamente.jpg"  alt="Intensamente">
-                <p class="descripcion">Riley, ahora con 13 años y a punto de entrar al instituto, vive cambios en su mente: sus emociones crearon el "Sentido de Identidad" para afrontar la adolescencia </p> 
-                <p><strong>Precio: 25$</strong></p> 
-                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
-            </div>
-            <div>
-                <h3>LOS INCREÍBLES</h3> 
-                <img src="img/Categorías/Infantil/Los increibles.jpg"  alt="Los increíbles">
-                <p class="descripcion">Un superhéroe retirado lucha contra el aburrimiento y, junto a su familia, tiene la oportunidad de salvar al mundo.</p> 
-                <p><strong>Precio: 15$</strong></p> 
-                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
-            </div>
-            <div>
-                <h3>KUNG FU PANDA</h3> 
-                <img src="img/Categorías/Infantil/Kung fu panda.jpg"  alt="Kung fu panda">
-                <p class="descripcion">El panda Po trabaja en la tienda de fideos de su familia y sueña en convertirse en un maestro del kung-fu. </p> 
-                <p><strong>Precio: 10$</strong></p> 
-                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
-            </div>
-            <div>
-                <h3>MONSTERS INC.</h3> 
-                <img src="img/Categorías/Infantil/Monsters Inc.jpg"  alt="Monsters Inc">
-                <p class="descripcion">Monsters, Incorporated es la fábrica de sustos más grande en el mundo de los monstruos y James P. Sullivan es uno de sus mejores asustadores.</p> 
-                <p><strong>Precio: 15$</strong></p> 
-                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
-            </div>
-        </section>
-        <h2 id="Terror" class="TitulosCategorias">Terror</h2>
-        <section id="Terror-sec" class="productos">
-            <div>
-                <h3>ANNABELLE</h3> 
-                <img src="img/Categorías/Terror/Annabelle.jpg"  alt="Annabelle">
-                <p class="descripcion">John Form encuentra el regalo perfecto para Mia, su esposa embarazada: una preciosa muñeca antigua llamada Annabelle.</p> 
-                <p><strong>Precio: 20$</strong></p> 
-                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
-            </div>
-            <div>
-                <h3>LA OUIJA</h3> 
-                <img src="img/Categorías/Terror/La ouija.jpg"  alt="La Ouija">
-                <p class="descripcion">Adolescentes despiertan involuntariamente a una oscura fuerza poderosa cuando ellos usan un tablero de Ouija para intentar comunicarse con un amigo que murió recientemente.</p> 
-                <p><strong>Precio: 25$</strong></p> 
-                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
-            </div>
-            <div>
-                <h3>LA MORGUE</h3> 
-                <img src="img/Categorías/Terror/La morgue.jpg"  alt="La morgue">
-                <p class="descripcion">Dos forenses, padre e hijo, investigan la muerte de una hermosa joven sobre la que nadie sabe nada. A medida que descubren más información, más se adentran en una telaraña de indicios y hechos extraños y desconcertantes.</p> 
-                <p><strong>Precio: 20$</strong></p> 
-                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
-            </div>
-            <div>
-                <h3>ASÍ EN LA TIERRA COMO EN EL INFIERNO</h3> 
-                <img src="img/Categorías/Terror/Asi en la tierra como en el infierno.jpg"  alt="Asi en la tierra como en el infierno">
-                <p class="descripcion">Kilómetros y kilómetros de tortuosas catacumbas yacen bajo las calles de París, plagadas de incontables almas. Cuando un equipo de exploradores se aventura en este desconocido laberinto</p> 
-                <p><strong>Precio: 15$</strong></p> 
-                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
-            </div>
-            <div>
-                <h3>LA NOCHE DEL DEMONIO: LA PUERTA ROJA</h3> 
-                <img src="img/Categorías/Terror/La noche del demonio.jpg"  alt="La noche del demonio">
-                <p class="descripcion">Nueve años después, Josh y Renai se han divorciado, Lorraine ha fallecido y Dalton ha ingresado en la universidad.</p> 
-                <p><strong>Precio: 20$</strong></p> 
-                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
-            </div>
-            <div>
-                <h3>EL CONJURO</h3> 
-                <img src="img/Categorías/Terror/El conjuro.jpg"  alt="El conjuro">
-                <p class="descripcion">A principios de los años 70, Ed y Lorrain Warren, reputados investigadores de fenómenos paranormales, se enfrentan a una entidad demoníaca al intentar ayudar a una familia que está siendo aterrorizada.</p> 
-                <p><strong>Precio: 25$</strong></p> 
-                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
-            </div>
-        </section>
-        <h2 id="Comedia" class="TitulosCategorias">Comedia</h2>
-        <section id="Comedia-sec" class="productos">
-            <div>
-                <h3>¿...Y DÓNDE ESTÁN LAS RUBIAS?</h3> 
-                <img src="img/Categorías/Comedia/Y donde estan las rubias.jpg"  alt="Y donde están las rubias">
-                <p class="descripcion">Dos torpes agentes del FBI se hacen pasar por dos chicas de la alta sociedad para investigar una serie de secuestros.</p> 
-                <p><strong>Precio: 15$</strong></p> 
-                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
-            </div>
-            <div>
-                <h3>SUPER COOL</h3> 
-                <img src="img/Categorías/Comedia/Super cool.jpg"  alt="Super cool">
-                <p class="descripcion">Seth y Evan, dos estudiantes inadaptados de preparatoria, tienen grandes esperanzas en su fiesta de graduación: los jóvenes se sienten retados por la sociedad y planean divertirse a lo grande.</p> 
-                <p><strong>Precio: 20$</strong></p> 
-                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
-            </div>
-            <div>
-                <h3>PROYECTO X</h3> 
-                <img src="img/Categorías/Comedia/Proyecto X.jpg"  alt="Proyecto X">
-                <p class="descripcion">Tres estudiantes de secundaria deciden organizar una fiesta salvaje en casa de uno de ellos, aprovechando que sus padres no están. Quieren hacer que la fiesta sea inolvidable, así que deciden grabarlo todo.</p> 
-                <p><strong>Precio: 15$</strong></p> 
-                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
-            </div>
-            <div>
-                <h3>SON COMO NIÑOS 2</h3> 
-                <img src="img/Categorías/Comedia/Son como niños.jpg"  alt="Son como niños">
-                <p class="descripcion">Tres años después de la reunión que volvió a unirlo a sus amigos de la infancia, Lenny Feder regresa junto a su familia a su pueblo natal para poder estar más cerca de sus amigos.</p> 
-                <p><strong>Precio: 20$</strong></p> 
-                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
-            </div>
-            <div>
-                <h3>LA MÁSCARA</h3> 
-                <img src="img/Categorías/Comedia/La mascara.jpg"  alt="La mascara">
-                <p class="descripcion">Una máscara antigua transforma a un monótono empleado bancario en un Romeo sonriente con poderes sobrehumanos.</p> 
-                <p><strong>Precio: 10$</strong></p> 
-                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
-            </div>
-            <div>
-                <h3>UNA ESPOSA DE MENTIRA</h3> 
-                <img src="img/Categorías/Comedia/Una esposa de mentira.jpg"  alt="Una esposa de mentira">
-                <p class="descripcion">El cirujano Danny decide contratar a su ayudante Katherine, una madre soltera con hijos, para que finjan ser su familia. </p> 
-                <p><strong>Precio: 15$</strong></p> 
-                <a href="https://wa.link/dbb65q" target="_blank">Ordena ahora via WhatsApp</a> 
-            </div>
-        </section>
-
+    <h2 id="Infantil" class="TitulosCategorias">Infantil</h2>
+    <section id="Infantil-sec" class="productos"> 
+        <div>
+            <h3>TOY STORY</h3> 
+            <img src="img/Categorías/Infantil/Toy story.jpg"  alt="Toy Story">
+            <p class="descripcion">Woody, el juguete favorito de Andy, se siente amenazado por la inesperada llegada de Buzz Lightyear, el guardián del espacio.</p> 
+            <p><strong>Precio: 20$</strong></p> 
+            <a class="botonesProductos" onclick="agregarProducto('TOY STORY', 20)">Agregrar pelicula a carrito</a> 
+        </div>
+        <div>
+            <h3>EL REY LEÓN</h3> 
+            <img src="img/Categorías/Infantil/El rey Leon.jpg"  alt="El rey Leon">
+            <p class="descripcion">El joven Simba, hijo del rey Mufasa, debe luchar contra su malvado tío Scar para ocupar el trono que dejó su padre asesinado.</p> 
+            <p><strong>Precio: 10$</strong></p> 
+            <a class="botonesProductos" onclick="agregarProducto('EL REY LEÓN', 10)">Agregrar pelicula a carrito</a> 
+        </div>
+        <div>
+            <h3>INTENSAMENTE 2</h3> 
+            <img src="img/Categorías/Infantil/Intensamente.jpg"  alt="Intensamente">
+            <p class="descripcion">Riley, ahora con 13 años y a punto de entrar al instituto, vive cambios en su mente: sus emociones crearon el "Sentido de Identidad" para afrontar la adolescencia </p> 
+            <p><strong>Precio: 25$</strong></p> 
+            <a class="botonesProductos" onclick="agregarProducto('INTENSAMENTE', 25)">Agregrar pelicula a carrito</a> 
+        </div>
+        <div>
+            <h3>LOS INCREÍBLES</h3> 
+            <img src="img/Categorías/Infantil/Los increibles.jpg"  alt="Los increíbles">
+            <p class="descripcion">Un superhéroe retirado lucha contra el aburrimiento y, junto a su familia, tiene la oportunidad de salvar al mundo.</p> 
+            <p><strong>Precio: 15$</strong></p> 
+            <a class="botonesProductos" onclick="agregarProducto('LOS INCREÍBLES', 15)">Agregrar pelicula a carrito</a> 
+        </div>
+        <div>
+            <h3>KUNG FU PANDA</h3> 
+            <img src="img/Categorías/Infantil/Kung fu panda.jpg"  alt="Kung fu panda">
+            <p class="descripcion">El panda Po trabaja en la tienda de fideos de su familia y sueña en convertirse en un maestro del kung-fu. </p> 
+            <p><strong>Precio: 10$</strong></p> 
+            <a class="botonesProductos" onclick="agregarProducto('KUNG FU PANDA', 10)">Agregrar pelicula a carrito</a> 
+        </div>
+        <div>
+            <h3>MONSTERS INC.</h3> 
+            <img src="img/Categorías/Infantil/Monsters Inc.jpg"  alt="Monsters Inc">
+            <p class="descripcion">Monsters, Incorporated es la fábrica de sustos más grande en el mundo de los monstruos y James P. Sullivan es uno de sus mejores asustadores.</p> 
+            <p><strong>Precio: 15$</strong></p> 
+            <a class="botonesProductos" onclick="agregarProducto('MONSTERS INC', 15)">Agregrar pelicula a carrito</a> 
+        </div>
+    </section>
+    <h2 id="Terror" class="TitulosCategorias">Terror</h2>
+    <section id="Terror-sec" class="productos">
+        <div>
+            <h3>ANNABELLE</h3> 
+            <img src="img/Categorías/Terror/Annabelle.jpg"  alt="Annabelle">
+            <p class="descripcion">John Form encuentra el regalo perfecto para Mia, su esposa embarazada: una preciosa muñeca antigua llamada Annabelle.</p> 
+            <p><strong>Precio: 20$</strong></p> 
+            <a class="botonesProductos" onclick="agregarProducto('ANNABELLE', 20)">Agregrar pelicula a carrito</a> 
+        </div>
+        <div>
+            <h3>LA OUIJA</h3> 
+            <img src="img/Categorías/Terror/La ouija.jpg"  alt="La Ouija">
+            <p class="descripcion">Adolescentes despiertan involuntariamente a una oscura fuerza poderosa cuando ellos usan un tablero de Ouija para intentar comunicarse con un amigo que murió recientemente.</p> 
+            <p><strong>Precio: 25$</strong></p> 
+            <a class="botonesProductos" onclick="agregarProducto('LA OUIJA', 25)">Agregrar pelicula a carrito</a> 
+        </div>
+        <div>
+            <h3>LA MORGUE</h3> 
+            <img src="img/Categorías/Terror/La morgue.jpg"  alt="La morgue">
+            <p class="descripcion">Dos forenses, padre e hijo, investigan la muerte de una hermosa joven sobre la que nadie sabe nada. A medida que descubren más información, más se adentran en una telaraña de indicios y hechos extraños y desconcertantes.</p> 
+            <p><strong>Precio: 20$</strong></p> 
+            <a class="botonesProductos" onclick="agregarProducto('LA MORGUE', 20)">Agregrar pelicula a carrito</a> 
+        </div>
+        <div>
+            <h3>ASÍ EN LA TIERRA COMO EN EL INFIERNO</h3> 
+            <img src="img/Categorías/Terror/Asi en la tierra como en el infierno.jpg"  alt="Asi en la tierra como en el infierno">
+            <p class="descripcion">Kilómetros y kilómetros de tortuosas catacumbas yacen bajo las calles de París, plagadas de incontables almas. Cuando un equipo de exploradores se aventura en este desconocido laberinto</p> 
+            <p><strong>Precio: 15$</strong></p> 
+            <a class="botonesProductos" onclick="agregarProducto('ASÍ EN LA TIERRA COMO EN EL INFIERNO', 15)">Agregrar pelicula a carrito</a> 
+        </div>
+        <div>
+            <h3>LA NOCHE DEL DEMONIO: LA PUERTA ROJA</h3> 
+            <img src="img/Categorías/Terror/La noche del demonio.jpg"  alt="La noche del demonio">
+            <p class="descripcion">Nueve años después, Josh y Renai se han divorciado, Lorraine ha fallecido y Dalton ha ingresado en la universidad.</p> 
+            <p><strong>Precio: 20$</strong></p> 
+            <a class="botonesProductos" onclick="agregarProducto('LA NOCHE DEL DEMONIO: LA PUERTA ROJA', 20)">Agregrar pelicula a carrito</a> 
+        </div>
+        <div>
+            <h3>EL CONJURO</h3> 
+            <img src="img/Categorías/Terror/El conjuro.jpg"  alt="El conjuro">
+            <p class="descripcion">A principios de los años 70, Ed y Lorrain Warren, reputados investigadores de fenómenos paranormales, se enfrentan a una entidad demoníaca al intentar ayudar a una familia que está siendo aterrorizada.</p> 
+            <p><strong>Precio: 25$</strong></p> 
+            <a class="botonesProductos" onclick="agregarProducto('EL CONJURO', 25)">Agregrar pelicula a carrito</a> 
+        </div>
+    </section>
+    <h2 id="Comedia" class="TitulosCategorias">Comedia</h2>
+    <section id="Comedia-sec" class="productos">
+        <div>
+            <h3>¿...Y DÓNDE ESTÁN LAS RUBIAS?</h3> 
+            <img src="img/Categorías/Comedia/Y donde estan las rubias.jpg"  alt="Y donde están las rubias">
+            <p class="descripcion">Dos torpes agentes del FBI se hacen pasar por dos chicas de la alta sociedad para investigar una serie de secuestros.</p> 
+            <p><strong>Precio: 15$</strong></p> 
+            <a class="botonesProductos" onclick="agregarProducto('¿...Y DÓNDE ESTÁN LAS RUBIAS?', 15)">Agregrar pelicula a carrito</a> 
+        </div>
+        <div>
+            <h3>SUPER COOL</h3> 
+            <img src="img/Categorías/Comedia/Super cool.jpg"  alt="Super cool">
+            <p class="descripcion">Seth y Evan, dos estudiantes inadaptados de preparatoria, tienen grandes esperanzas en su fiesta de graduación: los jóvenes se sienten retados por la sociedad y planean divertirse a lo grande.</p> 
+            <p><strong>Precio: 20$</strong></p> 
+            <a class="botonesProductos" onclick="agregarProducto('SUPER COOL', 20)">Agregrar pelicula a carrito</a> 
+        </div>
+        <div>
+            <h3>PROYECTO X</h3> 
+            <img src="img/Categorías/Comedia/Proyecto X.jpg"  alt="Proyecto X">
+            <p class="descripcion">Tres estudiantes de secundaria deciden organizar una fiesta salvaje en casa de uno de ellos, aprovechando que sus padres no están. Quieren hacer que la fiesta sea inolvidable, así que deciden grabarlo todo.</p> 
+            <p><strong>Precio: 15$</strong></p> 
+            <a class="botonesProductos" onclick="agregarProducto('PROYECTO X', 15)">Agregrar pelicula a carrito</a> 
+        </div>
+        <div>
+            <h3>SON COMO NIÑOS 2</h3> 
+            <img src="img/Categorías/Comedia/Son como niños.jpg"  alt="Son como niños">
+            <p class="descripcion">Tres años después de la reunión que volvió a unirlo a sus amigos de la infancia, Lenny Feder regresa junto a su familia a su pueblo natal para poder estar más cerca de sus amigos.</p> 
+            <p><strong>Precio: 20$</strong></p> 
+            <a class="botonesProductos" onclick="agregarProducto('SON COMO NIÑOS 2', 20)">Agregrar pelicula a carrito</a> 
+        </div>
+        <div>
+            <h3>LA MÁSCARA</h3> 
+            <img src="img/Categorías/Comedia/La mascara.jpg"  alt="La mascara">
+            <p class="descripcion">Una máscara antigua transforma a un monótono empleado bancario en un Romeo sonriente con poderes sobrehumanos.</p> 
+            <p><strong>Precio: 10$</strong></p> 
+            <a class="botonesProductos" onclick="agregarProducto('LA MÁSCARA', 10)">Agregrar pelicula a carrito</a> 
+        </div>
+        <div>
+            <h3>UNA ESPOSA DE MENTIRA</h3> 
+            <img src="img/Categorías/Comedia/Una esposa de mentira.jpg"  alt="Una esposa de mentira">
+            <p class="descripcion">El cirujano Danny decide contratar a su ayudante Katherine, una madre soltera con hijos, para que finjan ser su familia. </p> 
+            <p><strong>Precio: 15$</strong></p> 
+            <a class="botonesProductos" onclick="agregarProducto('UNA ESPOSA DE MENTIRA', 15)">Agregrar pelicula a carrito</a> 
+        </div>
+    </section>
+ 
    
 
 <br>
@@ -444,7 +463,7 @@ aria-hidden="true">
     <script type="module" src="/js/signinForm.js"></script>
     <script type="module" src="/js/logout.js"></script>
     <script type="module" src="/js/loginCheck.js"></script>
-    <script src="/js/carrito.js"></script>
+    <script src="js/carrito.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/nav.js"></script>

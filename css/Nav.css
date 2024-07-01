@@ -23,5 +23,33 @@ article .group {
 }
 .carrito-nav{
     height: 25px;
-    width: 25px;
+    width: 80px;
 }
+
+:root{
+    --color-acento: #30b8ee;
+  }
+  
+  #cart{
+    box-shadow: none !important; 
+  }
+
+  header nav div{
+    gap: 40px;
+  }
+  
+  header nav img{
+    height: 40px;
+  }
+  
+  #cuenta-carrito{
+    position: absolute;
+    background-color: var(--color-acento);
+    border-radius: 100%;
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    aspect-ratio: 1;
+    text-align: center;
+    /* margin-bottom: 15px; */
+  }

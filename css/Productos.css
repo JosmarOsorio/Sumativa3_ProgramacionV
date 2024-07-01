@@ -101,9 +101,9 @@ html{
     box-shadow: 0 0 10px green;    
 }
 
-
-
-
+.botonesProductos:hover{
+    cursor: pointer;
+}
 
 
 @media (max-width: 800px) {
